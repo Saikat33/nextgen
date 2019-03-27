@@ -1,0 +1,12 @@
+version: "2"
+services:
+  db:
+    build: .
+    ports:
+      - "5433:5433"
+    environment:
+     - POSTGRES_PASSWORD=password
+     - POSTGRES_USER=postgres
+     - POSTGRES_DB=nextgendb
+     - SCHEMA=public
+  
